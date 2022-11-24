@@ -8,16 +8,17 @@ $media-md: 992px; //62em
 $media-sm: 768px; //48em
 $media-xs: 544px; //34em
 
-
 //fonts
-// $font-1: ;
-// $font-2: ;
+$font-1: "petala-pro", sans-serif;
+$font-2: "iskra", "Open Sans";
 
 //colors
-
+$white: #fff;
+$green: #05b44f;
+$text: #4c4c4c;
 
 //weights
-// $light:300;
-// $regular:400;
+//$light: 300;
+$regular: 400;
 // $semi-bold:600;
-// $bold:700;
+$bold: 700;

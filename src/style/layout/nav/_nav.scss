@@ -1,0 +1,65 @@
+.navbar {
+  position: fixed !important;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  transition: background-color 0.4s ease-out;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  transition: background-color 0.4s ease-out;
+  .navbar-conatiner {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    .navbar-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .navbar-linkblock {
+        .navlinks {
+          text-decoration: none;
+          color: $white;
+          transition: 0.3s ease-in-out;
+          font-family: $font-1;
+          font-weight: $regular;
+          padding-left: 15px;
+          padding-right: 15px;
+          font-size: 16px;
+          line-height: 16px;
+          &:hover {
+            color: $green !important;
+          }
+        }
+      }
+      .hamburger {
+        width: 20%;
+        height: 100%;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-end;
+        .line1 {
+          background-color: #000;
+          width: 20px;
+          height: 2px;
+          border-radius: 50px;
+        }
+        .line2 {
+          background-color: #000;
+          width: 20px;
+          height: 2px;
+          border-radius: 50px;
+          margin-top: 2px;
+          margin-bottom: 2px;
+        }
+        .line3 {
+          background-color: #000;
+          width: 20px;
+          height: 2px;
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+}

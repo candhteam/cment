@@ -1,13 +1,16 @@
-*{
-    box-sizing: border-box;
-    &:focus{
-        outline: none;
-    }
-    &:hover{
-        outline: none;
-    }
+* {
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    outline: none;
+  }
 }
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
 }

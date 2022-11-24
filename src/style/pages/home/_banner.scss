@@ -1,0 +1,15 @@
+.banner {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  .banner-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .scroll-down {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+  }
+}

@@ -4,5 +4,5 @@ if (module.hot) {
 require('./custom');
 
 // this import is required for bootstrap
-// import 'bootstrap';
+import 'bootstrap';
 

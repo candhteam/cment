@@ -7,7 +7,11 @@
     <title>CMENT</title>
     <!--font-->
     <link rel="stylesheet" href="https://use.typekit.net/gbw0ltt.css" />
-  </head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    </head>
   <body>
     <!--Navbar starts-->
     <div class="navbar">
@@ -118,10 +122,9 @@
 
         <div class="portfolio">
           <div class="grid">
-            <div class="gallery">
+            <button type="button" class="gallery" data-target="#simpleModal_1" data-toggle="modal">
               <div class="port-image">
-                <img
-                  src="./static/Images/portimages/1d4fea96f62169f20aa97e903869bdd9.png"
+                <img src="./static/Images/portimages/1d4fea96f62169f20aa97e903869bdd9.png"
                   class="portfolio-img"
                   alt="showreel"
                 />
@@ -131,9 +134,9 @@
                 <img src="./static/arrow/plus.png" alt="" />
                 <h3 class="text-overlay">SHOWREEL 2020</h3>
               </div>
-            </div>
-
-            <div class="gallery">
+            </button>
+          
+            <button type="button" class="gallery" data-target="#simpleModal_2" data-toggle="modal">
               <div class="port-image">
                 <img
                   src="./static/Images/portimages/c27d8d80f6db8517e9fc63bfa8cc083d.jpeg"
@@ -149,7 +152,7 @@
                   TVC / 33 secs
                 </h3>
               </div>
-            </div>
+            </button>
 
             <div class="gallery">
               <div class="port-image">
@@ -241,7 +244,7 @@
               </div>
             </div>
 
-            <div class="gallery">
+            <div class="gallery" >
               <div class="port-image">
                 <img
                   src="./static/Images/portimages/ab1ecf3524f67e7a7cf7afaf67e88f0d.jpeg"
@@ -398,6 +401,7 @@
                   TVC / 1:00
                 </h3>
               </div>
+
             </div>
 
             <div class="gallery">
@@ -831,8 +835,12 @@
           </div>
         </div>
       </div>
+       
+   
+  </div>
     </section>
     <!--Works section ends-->
+ 
 
     <!--footer starts-->
     <footer>
@@ -875,14 +883,48 @@
       </div>
     </footer>
     <!--footer ends-->
-
+    <!-- The Modal -->
+    <div id="simpleModal_1" class="modal">
+      <div class="modal-content">
+        <span class="close" data-dismiss="modal">&times;</span>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./static/Images/8/1b9913d85bb62194189de006bb427fa8.jpeg"></div>
+            <div class="swiper-slide"><img src="./static/Images/8/37e56ecd2311573e5ef44bacf1e85b19.jpeg"></div>
+            <div class="swiper-slide"><img src="./static/Images/8/687cedb3b8d186612599ab93d466ad4c.jpeg"></div>
+            
+            
+          </div> 
+          
+          <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div> -->
+        </div>
+      </div>
+  </div>
+   <!-- The Modal2 -->
+   <div id="simpleModal_2" class="modal">
+    <div class="modal-content">
+        <span class="close" data-dismiss="modal">&times;</span>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./static/Images/8/ff16a5ef92d495e28bcf6ae2e12962fd.jpeg"></div>
+            
+          </div> 
+        </div>
+    </div>
+  </div>
+    
+   
     <!--script starts-->
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"
     ></script>
-
-    <!--script ends-->
+    
+       <!-- Swiper JS -->
+       <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <!--script ends-->
+  
   </body>
 </html>

@@ -34,11 +34,9 @@
         }
       }
       .hamburger {
-        width: 20%;
+        width: 4%;
         height: 100%;
         display: none;
-        flex-direction: column;
-        justify-content: flex-end;
         .line1 {
           background-color: #000;
           width: 20px;
@@ -58,6 +56,36 @@
           width: 20px;
           height: 2px;
           border-radius: 50px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: $media-sm) {
+  .navbar {
+    position: relative;
+    background-color: #fff !important;
+    .navbar-conatiner {
+      .navbar-block {
+        .navbar-linkblock {
+          flex-direction: column;
+          position: absolute;
+          background-color: $white;
+          width: 100%;
+          top: 70px;
+          left: 0;
+          display: none;
+          &.active {
+            display: flex;
+            box-shadow: rgb(119 119 119 / 30%) 0px 8px 7px;
+          }
+          .navlinks {
+            color: #000 !important;
+            padding-bottom: 10px;
+          }
+        }
+        .hamburger {
+          display: block;
         }
       }
     }

@@ -1,3 +1,4 @@
+//Scroll Navbar
 $(document).ready(function () {
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
@@ -12,34 +13,19 @@ $(document).ready(function () {
     }
   });
 });
-
-document.addEventListener('click', function (e) {
-  e = e || window.event;
-  var target = e.target || e.srcElement;
-
-  if (target.hasAttribute('data-toggle') && target.getAttribute('data-toggle') == 'modal') {
-      if (target.hasAttribute('data-target')) {
-          var m_ID = target.getAttribute('data-target');
-          document.getElementById(m_ID).classList.add('open');
-          e.preventDefault();
-      }
-  }
-
-  // Close modal window with 'data-dismiss' attribute or when the backdrop is clicked
-  if ((target.hasAttribute('data-dismiss') && target.getAttribute('data-dismiss') == 'modal') || target.classList.contains('modal')) {
-      var modal = document.querySelector('[class="modal open"]');
-      modal.classList.remove('open');
-      e.preventDefault();
-  }
-}, false);
-
-
-
-//Initialize Swiper 
-      
-      var swiper = new Swiper(".mySwiper", {
-        pagination: {
-          el: ".swiper-pagination",
-        },
-      });
-   
+//hambuger menu
+$(document).ready(function () {
+  $(".hamburger").click(function () {
+    $(".navbar-linkblock").toggleClass("active");
+  });
+});
+//popup modal1
+document.querySelectorAll(".gallery .gallery1").forEach((image) => {
+  image.onclick = () => {
+    document.querySelector(".popup-modal").style.display = "block";
+    document.querySelector(".popup-img1").src = image.getAttribute("src");
+  };
+});
+document.querySelector(".popup-modal .close").onclick = () => {
+  document.querySelector(".popup-modal").style.display = "none";
+};

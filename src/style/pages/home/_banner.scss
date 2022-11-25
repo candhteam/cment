@@ -2,6 +2,9 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  @media (max-width: $media-sm) {
+    display: none;
+  }
   .banner-video {
     height: 100%;
     width: 100%;

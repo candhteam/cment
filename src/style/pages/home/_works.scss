@@ -3,9 +3,16 @@
     display: flex;
     width: 100%;
     padding-left: 30px;
+    @media (max-width: $media-sm) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
     .client-list {
       width: 20%;
       padding-right: 30px;
+      @media (max-width: $media-sm) {
+        display: none;
+      }
       .client-heading {
         font-family: $font-1;
         font-size: 14px;
@@ -30,6 +37,9 @@
     }
     .portfolio {
       width: 80%;
+      @media (max-width: $media-sm) {
+        width: 100%;
+      }
       .grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -93,7 +103,6 @@
             }
           }
         }
-
       }
     }
   }

@@ -118,8 +118,7 @@
 
         <div class="portfolio">
           <div class="grid"> 
-            <div class="gallery">     
-              <div class="gallery1">    
+            <div class="gallery  myBtn_multi">     
                 <div class="port-image">
                   <img src="./static/Images/portimages/1d4fea96f62169f20aa97e903869bdd9.png"
                     class="portfolio-img"
@@ -131,7 +130,6 @@
                   <img src="./static/arrow/plus.png" alt="" />
                   <h3 class="text-overlay">SHOWREEL 2020</h3>
                 </div>
-              </div>
             </div>
 
             <div class="gallery">
@@ -884,25 +882,121 @@
     </footer>
     <!--footer ends-->   
 
-   <!--popup modal starts-->
-<div class="popup-modal">
-      <a href="#" class="close">
-        <img src="./static/arrow/close.png" alt="">
-      </a>
-
-    <div class="popup-img">
-      <iframe src="https://player.vimeo.com/video/402525525?h=e9814c84e2" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-       <div class="popup-heading">SHOWREEL 2020</div>
+    <!-- modal1 -->
+    <div class="modal modal_multi">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="close-align">
+          <span class="close close_multi">×</span>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <iframe
+                src="https://player.vimeo.com/video/402525525?h=e9814c84e2"
+                width="640"
+                height="360"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div class="reel-heading">
+                <p class="headings">SHOWREEL 2020</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
     </div>
-</div>
-    <!--popup modal ends-->
 
+    
     <!--script starts-->
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      // Get the modal
+
+      var modalparent = document.getElementsByClassName("modal_multi");
+
+      // Get the button that opens the modal
+
+      var modal_btn_multi = document.getElementsByClassName("myBtn_multi");
+
+      // Get the <span> element that closes the modal
+      var span_close_multi = document.getElementsByClassName("close_multi");
+
+      // When the user clicks the button, open the modal
+      function setDataIndex() {
+        for (i = 0; i < modal_btn_multi.length; i++) {
+          modal_btn_multi[i].setAttribute("data-index", i);
+          modalparent[i].setAttribute("data-index", i);
+          span_close_multi[i].setAttribute("data-index", i);
+        }
+      }
+
+      for (i = 0; i < modal_btn_multi.length; i++) {
+        modal_btn_multi[i].onclick = function () {
+          var ElementIndex = this.getAttribute("data-index");
+          modalparent[ElementIndex].style.display = "block";
+        };
+
+        // When the user clicks on <span> (x), close the modal
+        span_close_multi[i].onclick = function () {
+          var ElementIndex = this.getAttribute("data-index");
+          modalparent[ElementIndex].style.display = "none";
+        };
+      }
+
+      window.onload = function () {
+        setDataIndex();
+      };
+
+      window.onclick = function (event) {
+        if (
+          event.target === modalparent[event.target.getAttribute("data-index")]
+        ) {
+          modalparent[event.target.getAttribute("data-index")].style.display =
+            "none";
+        }
+
+        // OLD CODE
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      //XXXXXXXXXXXXXXXXXXXXXXX    Modified old code    XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+      // Get the modal
+
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = modal.getElementsByClassName("close")[0]; // Modified by dsones uk
+
+      // When the user clicks on the button, open the modal
+
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+    </script>
+
+    <!--script ends-->
   
   </body>
 </html>

@@ -1,34 +1,92 @@
-.popup-modal {
-  position: fixed;
-  top: 0;
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  /* Location of the box */
   left: 0;
+  top: 0;
+
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
   background-color: #383838;
-  height: 100%;
-  width: 100%;
-  z-index: 100;
-  display: none;
-  .close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 4015x;
-    z-index: 100;
-  }
-  .popup-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-  }
-  .popup-heading {
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    line-height: 30px;
-    padding-top: 20px;
-    font-family: $font-1;
+  /* Black w/ opacity */
+
+  .modal-content {
+    background-color: transparent !important;
+    margin: auto;
+    height: 100%;
+
+    width: 100%;
+
+    .close-align {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 20px;
+      /* The Close Button */
+      .close {
+        color: #fff;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #fee;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+    .swiper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .swiper-slide {
+        /* Center slide text vertically */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .reel-heading {
+          .headings {
+            color: #fff;
+            margin-top: 1rem;
+            font-family: $font-1;
+            font-weight: 500;
+          }
+        }
+      }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .flex {
+      display: flex;
+      flex-direction: column;
+    }
+    .swiper-button-next {
+      color: #fff;
+    }
+    .swiper-button-prev {
+      color: #fff;
+    }
+    .swiper-pagination {
+      color: #fff;
+    }
+    .swiper-pagination-current {
+      color: #fff;
+    }
+    .swiper-pagination-total {
+      color: #fff;
+    }
   }
 }
+
+/* Modal Content */

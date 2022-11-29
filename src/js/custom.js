@@ -19,13 +19,16 @@ $(document).ready(function () {
     $(".navbar-linkblock").toggleClass("active");
   });
 });
-//popup modal1
-document.querySelectorAll(".gallery .gallery1").forEach((image) => {
-  image.onclick = () => {
-    document.querySelector(".popup-modal").style.display = "block";
-    document.querySelector(".popup-img1").src = image.getAttribute("src");
-  };
+
+// Initialize Swiper
+
+var swiper = new Swiper(".mySwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
-document.querySelector(".popup-modal .close").onclick = () => {
-  document.querySelector(".popup-modal").style.display = "none";
-};

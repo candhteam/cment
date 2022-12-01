@@ -7,12 +7,20 @@
     .content-block {
       padding-top: 126px;
       padding-bottom: 75px;
+      @media (max-width: $media-sm) {
+        padding-bottom: 15px;
+        padding-top: 90px;
+      }
       .content {
         color: $text;
         font-size: 16px;
         line-height: 24px;
         font-family: $font-1;
         font-weight: 300;
+        @media (max-width: $media-sm) {
+          font-size: 14px;
+          line-height: 22px;
+        }
       }
     }
   }

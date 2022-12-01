@@ -2,6 +2,12 @@ footer {
   .footer-section {
     padding-top: 90px;
     padding-bottom: 60px;
+    @media (max-width: $media-sm) {
+      padding-top: 50px;
+      padding-bottom: 20px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
     .footer-heading {
       font-family: $font-2;
       font-size: 65px;
@@ -12,6 +18,11 @@ footer {
       text-align: center;
       padding-bottom: 70px;
       margin: 0;
+      @media (max-width: $media-sm) {
+        font-size: 45px;
+        line-height: 55px;
+        padding-bottom: 45px;
+      }
     }
     .footercontent-block {
       display: flex;
@@ -24,6 +35,12 @@ footer {
         padding-bottom: 40px;
         font-weight: 300;
         font-family: $font-1;
+        @media (max-width: $media-sm) {
+          padding-bottom: 15px;
+          text-align: center;
+          font-size: 14px;
+          line-height: 24px;
+        }
       }
       .drop {
         color: $text;
@@ -31,6 +48,11 @@ footer {
         font-size: 20px;
         line-height: 30px;
         font-weight: 400;
+        @media (max-width: $media-sm) {
+          font-size: 18px;
+          line-height: 28px;
+          margin-bottom: 10px;
+        }
       }
       .mail {
         color: $text;
@@ -43,6 +65,11 @@ footer {
         transition: 0.3s ease-in-out;
         &:hover {
           color: $green;
+        }
+        @media (max-width: $media-sm) {
+          font-size: 25px;
+          line-height: 35px;
+          padding-bottom: 30px;
         }
       }
       .phone {
@@ -67,6 +94,10 @@ footer {
     .tail-block {
       display: flex;
       justify-content: center;
+      @media (max-width: $media-sm) {
+        flex-direction: column;
+        align-items: center;
+      }
       .copy-rights {
         padding-right: 25px;
         letter-spacing: 1px;
@@ -89,6 +120,13 @@ footer {
       margin: 0 auto;
       display: flex;
       padding: 5px;
+      @media (max-width: $media-sm) {
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+      }
 
       .legal-bold {
         color: #939292;

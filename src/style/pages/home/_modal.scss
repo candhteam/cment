@@ -9,7 +9,10 @@
   height: 100vh;
   overflow: auto; /* Enable scroll if needed */
   background-color: #383838;
-
+  @media (max-width: $media-md){
+    height: 100%;
+    padding: 10px;
+  }
   .modal-content {
     background-color: transparent !important;
     margin: auto;
@@ -21,6 +24,10 @@
       padding-top: 50px;
       padding-left: 250px;
       padding-bottom: 50px;
+      @media (max-width: $media-md){
+        padding-left: 0px;
+        padding-top: 0px;
+      }
       .details {
         color: #fff;
         font-family: $font-1;
@@ -34,6 +41,9 @@
       justify-content: flex-end;
       margin-right: 20px;
       /* The Close Button */
+      @media (max-width: $media-md){
+        margin-right: 10px;
+      }
       .close {
         color: #fff;
         float: right;
@@ -51,14 +61,30 @@
     .swiper {
       width: 100%;
       height: 90%;
+      @media (max-width: $media-md){
+        height: 100%;
+      }
       .swiper-slide {
         height: 90%;
+        @media (max-width: $media-md){
+          height: 100%;
+        }
         .iframe-container {
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
           height: 110%;
+          @media (max-width: $media-md){
+            height: 100%;
+           
+          }
+          @media (max-width: $media-sm){
+            height: 90%;
+            
+           
+          }
+          
         }
         /* Center slide text vertically */
         .reel-heading {
@@ -77,6 +103,14 @@
         width: 50%;
         height: 60%;
         object-fit: cover;
+        @media (max-width: $media-md){
+          width: 100%;
+          height: 50%;
+        }
+        @media (max-width: $media-sm){
+          width: 100%;
+          height: 60%;
+        }
       }
     }
     .flex {

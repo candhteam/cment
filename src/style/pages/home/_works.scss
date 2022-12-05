@@ -91,10 +91,16 @@
 
             &:hover {
               opacity: 0.86;
+              @media (max-width: $media-md) {
+               opacity: 0;
+              }
             }
             img {
               width: 48px;
               height: 48px;
+              @media (max-width: $media-sm) {
+               
+              }
             }
             .text-overlay {
               color: white;
